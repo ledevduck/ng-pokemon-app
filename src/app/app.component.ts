@@ -7,7 +7,7 @@ import { Pokemon } from 'src/pokemon';
   template: `<h1>Liste de pokemons</h1>`
 })
 export class AppComponent implements OnInit {
-  pokemonList = POKEMONS;
+  pokemonList: Pokemon[] = POKEMONS;
 
   ngOnInit() {
     console.table(this.pokemonList);
