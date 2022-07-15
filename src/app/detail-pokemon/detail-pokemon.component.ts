@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail-pokemon',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class DetailPokemonComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
