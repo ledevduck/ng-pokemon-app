@@ -9,8 +9,7 @@ export class BorderCardDirective {
     this.setHeight(180);
   }
 
-  @Input('pkmnBorderCard') borderColor: string; // alias
-  @Input() pkmnBorderCard: string; // sans alias
+  @Input('pkmnBorderCard') borderColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
     this.setBorder(this.borderColor || '#009688');
