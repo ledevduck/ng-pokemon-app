@@ -1,16 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { Pokemon } from '../pokemon';
 
 @Component({
   selector: 'app-search-pokemon',
-  templateUrl: './search-pokemon.component.html',
-  styles: [
-  ]
+  templateUrl: './search-pokemon.component.html'
 })
 export class SearchPokemonComponent implements OnInit {
 
-  constructor() { }
+  searchTerms = new Subject<string>();
+  pokemons$: Observable<Pokemon[]>;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  search(term: string) {
+
+  }
+
+  goToDetail(pokemon: Pokemon) {
+    const link = ['pokemon', pokemon.id];
+    this.router.navigate(link);
   }
 
 }
