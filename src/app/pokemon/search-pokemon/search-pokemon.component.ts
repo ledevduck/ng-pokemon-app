@@ -18,7 +18,7 @@ export class SearchPokemonComponent implements OnInit {
   }
 
   search(term: string) {
-
+    this.searchTerms.next(term);
   }
 
   goToDetail(pokemon: Pokemon) {
