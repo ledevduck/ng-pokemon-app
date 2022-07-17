@@ -23,7 +23,7 @@ export class SearchPokemonComponent implements OnInit {
       debounceTime(300),
       distinctUntilChanged(),
       switchMap((term) => this.pokemonService.searchPokemonList(term))
-    )
+    );
   }
 
   search(term: string) {
