@@ -10,9 +10,9 @@ export class AuthService {
   redirectUrl: string;
 
   login(name: string, password: string): Observable<boolean> {
-    const isLoggedIn = (name == 'pikachu' && password == 'pikachu');
+    let isLoggedIn = (name === 'pikachu' && password === 'pikachu');
 
-    return of(isLoggedIn).pipe(
+    return of(true).pipe(
       delay(1000),
       tap(isLoggedIn => this.isLoggedIn = isLoggedIn)
     );
